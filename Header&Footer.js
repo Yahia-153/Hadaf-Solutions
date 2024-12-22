@@ -1,4 +1,6 @@
-const body = document.body;
+//* THEME SWITCHING FUNCTION ;
+function theme(){
+    const body = document.body;
 const themeSwitchBtn = document.querySelector("#themeSwitchBtn");
 let themeIcon = document.querySelector("#themeSwitchBtn i");
 let themeHeaderLogo = document.querySelector("#haederLogo");
@@ -47,3 +49,5 @@ function switchTheme() {
 themeSwitchBtn.addEventListener('click', () => {
     switchTheme()
 })
+}
+theme()
