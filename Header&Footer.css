@@ -1,0 +1,28 @@
+@import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
+:root{
+    /* WD = White & Dark Transfare */
+    --WD:light-dark(rgba(33, 36, 41 , .1), rgba(255, 255, 255, .1));
+}
+*{
+    transition: all 0.015s ease;
+}
+body{
+    .navbar{
+        /* background-color: var(--WD); */
+        backdrop-filter: opacity(.2);
+        .container{
+            .collapse{
+                .navbar-nav{
+                    .nav-link{
+                        i{
+                            margin: 0 .5rem 0 0;
+                        }
+                        &.active{
+                            border-bottom: 1px solid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
