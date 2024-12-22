@@ -1,9 +1,14 @@
 const body = document.body;
 const themeSwitchBtn = document.querySelector("#themeSwitchBtn");
 let themeIcon = document.querySelector("#themeSwitchBtn i");
-let themeIcons={
+let themeHeaderLogo = document.querySelector("#haederLogo");
+const themeIcons={
     "dark":"bi-sun",
     "light":"bi-moon"
+}
+const themeHeaderLogos={
+    "dark":"Logos/white.png",
+    "light":"Logos/colored.png"
 }
 // Local theme storage
 localStorage = window.localStorage;
@@ -13,6 +18,8 @@ body.setAttribute('data-bs-theme', currentTheme);
 body.classList.add(currentTheme)
 // add btn theme icon
 themeIcon.classList.add(themeIcons[currentTheme])
+// add theme logo
+themeHeaderLogo.setAttribute("src" , themeHeaderLogos[currentTheme]);
 // Theme switch button function
 function switchTheme() {
     if (body.classList.contains('dark')) {
@@ -23,6 +30,7 @@ function switchTheme() {
         themeIcon.classList.remove(themeIcons["dark"]);
         themeIcon.classList.add(themeIcons["light"]);
         themeIcon.setAttribute('title', 'Switch to dark Theme');
+        themeHeaderLogo.setAttribute("src" , themeHeaderLogos["light"]);
     } else {
         //switch to dark
         body.classList.add('dark');
@@ -32,6 +40,7 @@ function switchTheme() {
         themeIcon.classList.remove(themeIcons["light"]);
         themeIcon.classList.add(themeIcons["dark"]);
         themeIcon.setAttribute('title', 'Switch to light Theme');
+        themeHeaderLogo.setAttribute("src" , themeHeaderLogos["dark"]);
     }
 }
 // Event listener for theme switch button

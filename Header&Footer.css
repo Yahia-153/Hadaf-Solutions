@@ -11,8 +11,15 @@ body{
         /* background-color: var(--WD); */
         backdrop-filter: opacity(.2);
         .container{
+            .navbar-brand{
+                img{
+                    width: 150px;
+                }
+            }
             .collapse{
                 .navbar-nav{
+                    display: flex;
+                    gap: 0.5em;
                     .nav-link{
                         i{
                             margin: 0 .5rem 0 0;
