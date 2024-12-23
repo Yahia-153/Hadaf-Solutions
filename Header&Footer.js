@@ -3,7 +3,7 @@ function theme(){
     const body = document.body;
 const themeSwitchBtn = document.querySelector("#themeSwitchBtn");
 let themeIcon = document.querySelector("#themeSwitchBtn i");
-let themeHeaderLogo = document.querySelector("#haederLogo");
+let themeHeaderLogo = document.querySelector("#headerLogo");
 const themeIcons={
     "dark":"bi-sun",
     "light":"bi-moon"
@@ -51,3 +51,21 @@ themeSwitchBtn.addEventListener('click', () => {
 })
 }
 theme()
+//* HEADER TRANSITION FUNCTION ;
+function headerTransition() {
+    const header = document.querySelector("#header");
+    let lastScroll = 0;
+    // console.log(header);
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastScroll) {
+            //scroll down
+            header.classList.add('hide');
+        } else {
+            //scroll up
+            header.classList.remove('hide');
+        }
+        lastScroll = currentScroll;
+    })
+}
+headerTransition()

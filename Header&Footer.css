@@ -9,15 +9,16 @@
 }
 body{
     font-family: 'Neometric Regular'; 
-    min-height: 110dvh;
+    min-height: 150dvh;
     .navbar{
         /* background-color: var(--WD); */
         backdrop-filter: opacity(.2);
+        border-bottom: 1px solid ;
         .container{
              /* background-color: var(--WD); */
             .navbar-brand{
                 img{
-                    width: 150px;
+                    height: 45px;
                 }
             }
             .collapse{
@@ -35,6 +36,33 @@ body{
                         }&:not(.active){
                             border-bottom: transparent 1px solid ;
                         }
+                    }
+                }
+            }
+        }
+        &.hide{
+            transform: translateY(-100%);
+        }
+    }
+    .footer{
+        background-color: var(--WD);
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1em;
+            .footer-logo{
+                img{
+                    height: 45px;
+                }
+            }
+            .footer-nav{
+                display: flex;
+                gap: 1em;
+                .nav-link{
+                    text-transform: capitalize;
+                    i{
+                        margin: 0 .5rem 0 0;
                     }
                 }
             }
